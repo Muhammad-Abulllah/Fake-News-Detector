@@ -1,0 +1,3 @@
+Model,Accuracy,F1 Score,Precision,Recall
+TF-IDF + Logistic Regression,0.9542,0.9489,0.9501,0.9477
+"BERT (fine-tuned, 3 epochs)",0.9905,0.9894,0.9932,0.9855
