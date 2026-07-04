@@ -1,58 +1,81 @@
-# Fake News Classifier
+---
 
-BERT-based fake news classifier fine-tuned on the WELFake dataset. The project includes exploratory notebooks, a FastAPI endpoint, a Gradio demo, trained model artifacts, and model comparison outputs.
+## 📁 Dataset
 
-## Project Structure
+**WELFake** — 72,134 news articles (real + fake) scraped from four news datasets.
+- After cleaning and deduplication: **63,071 articles**
+- Class distribution: 55% Real / 45% Fake
+- Split: 80% train / 10% val / 10% test
 
-```text
-fake-news-classifier/
-├── notebooks/
-│   ├── EDA.ipynb
-│   ├── Tensors.ipynb
-│   └── Train Test Split.ipynb
-├── bert_final/
-├── app.py
-├── gradio_app.py
-├── requirements.txt
-├── model_comparison.csv
-├── model_comparison.png
-└── README.md
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Language | Python 3.10 |
+| Deep Learning | PyTorch |
+| NLP Model | Hugging Face Transformers (BERT) |
+| Training | Google Colab (T4 GPU) |
+| Backend API | FastAPI + Uvicorn |
+| Frontend UI | Gradio |
+| Deployment | Hugging Face Spaces |
+| Data Processing | Pandas, Scikit-learn |
+| Visualization | Matplotlib, Seaborn |
+
+---
+
+## 🚀 Run Locally
+
+**1. Clone the repo**
+```bash
+git clone https://github.com/YOUR_USERNAME/fake-news-classifier
+cd fake-news-classifier
 ```
 
-Additional notebooks may also be kept in `notebooks/` for tokenizer experiments and baseline models.
-
-## Setup
-
+**2. Create virtual environment**
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
+python -m venv venv
+venv\Scripts\activate
+```
+
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
 ```
 
-## Run the FastAPI App
-
-```bash
-uvicorn app:app --reload
-```
-
-Open `http://127.0.0.1:8000/docs` to test the `/predict` endpoint.
-
-## Run the Gradio Demo
-
+**4. Run Gradio app**
 ```bash
 python gradio_app.py
 ```
 
-## Model Files
-
-The app expects the fine-tuned BERT model in `bert_final/`:
-
-```text
-bert_final/
-├── config.json
-├── model.safetensors
-├── tokenizer.json
-└── tokenizer_config.json
+**5. Or run FastAPI**
+```bash
+uvicorn app:app --reload
+# Visit http://127.0.0.1:8000/docs
 ```
 
-`model.safetensors` is large, so use Git LFS if you plan to push the model to GitHub.
+---
+
+## 📈 Training Details
+
+- **Model:** bert-base-uncased (110M parameters)
+- **Optimizer:** AdamW (lr=2e-5)
+- **Scheduler:** Linear warmup
+- **Batch size:** 16
+- **Epochs:** 3
+- **Hardware:** Google Colab T4 GPU (~42 min/epoch)
+
+| Epoch | Train Loss | Val Loss |
+|-------|------------|----------|
+| 1 | 0.0867 | 0.0392 |
+| 2 | 0.0263 | 0.0418 |
+| 3 | 0.0072 | 0.0533 |
+
+---
+
+## 👤 Author
+
+**Muhammad Abdullah**
+- 📧 nisarabdullah6741@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/abdullah-nisar-aa7335247/)
