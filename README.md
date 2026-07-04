@@ -25,6 +25,7 @@ fake-news-classifier/
 │   └── Train Test Split.ipynb
 │   └── TF-IDF + LR baseline.ipynb
 │   └── Fake_News_Classifier.ipynb
+
 ├── bert_final/          
 ├── app.py               
 ├── gradio_app.py        
