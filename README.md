@@ -20,6 +20,7 @@ BERT outperforms the classical NLP baseline by **4% across all metrics**.
 ## 🏗️ Architecture
 fake-news-classifier/
 ├── notebooks/
+
 │   ├── EDA.ipynb
 │   ├── Tensors.ipynb
 │   └── Train Test Split.ipynb
