@@ -18,22 +18,31 @@ BERT outperforms the classical NLP baseline by **4% across all metrics**.
 ---
 
 ## 🏗️ Architecture
+```text
 fake-news-classifier/
-├── notebooks/
-
-│   ├── EDA.ipynb
-│   ├── Tensors.ipynb
-│   └── Train Test Split.ipynb
-│   └── TF-IDF + LR baseline.ipynb
-│   └── Fake_News_Classifier.ipynb
-
-├── bert_final/          
-├── app.py               
-├── gradio_app.py        
-├── requirements.txt     
-├── model_comparison.csv 
-├── model_comparison.png 
-└── README.md           
+│
+├── 📁 notebooks/
+│   ├── 📓 EDA.ipynb
+│   ├── 📓 Tensors.ipynb
+│   ├── 📓 Train Test Split.ipynb
+│   ├── 📓 TF-IDF + LR baseline.ipynb
+│   └── 📓 Fake_News_Classifier.ipynb
+│
+├── 📁 bert_final/
+│   ├── config.json
+│   ├── model.safetensors
+│   ├── tokenizer.json
+│   ├── tokenizer_config.json
+│   ├── special_tokens_map.json
+│   └── vocab.txt
+│
+├── 🐍 app.py
+├── 🐍 gradio_app.py
+├── 📄 requirements.txt
+├── 📊 model_comparison.csv
+├── 📈 model_comparison.png
+└── 📘 README.md
+```          
 
 
 ---
