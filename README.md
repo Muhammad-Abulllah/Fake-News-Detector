@@ -33,8 +33,6 @@ fake-news-classifier/
 │   ├── model.safetensors
 │   ├── tokenizer.json
 │   ├── tokenizer_config.json
-│   ├── special_tokens_map.json
-│   └── vocab.txt
 │
 ├── 🐍 app.py
 ├── 🐍 gradio_app.py
