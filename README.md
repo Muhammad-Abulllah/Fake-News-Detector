@@ -1,3 +1,39 @@
+# 🔍 Fake News Detector — BERT Fine-tuned Classifier
+
+A production-grade fake news detection system built with BERT, PyTorch, and Hugging Face Transformers. Fine-tuned on the WELFake dataset (63K articles) and deployed as an interactive web app.
+
+🚀 **Live Demo:** [huggingface.co/spaces/Muhammad0304/fake-news-detector](https://huggingface.co/spaces/Muhammad0304/fake-news-detector)
+
+---
+
+## 📊 Results
+
+| Model | Accuracy | F1 Score | Precision | Recall |
+|-------|----------|----------|-----------|--------|
+| TF-IDF + Logistic Regression (baseline) | 95.42% | 94.89% | 95.01% | 94.77% |
+| **BERT fine-tuned (3 epochs)** | **99.05%** | **98.94%** | **99.32%** | **98.55%** |
+
+BERT outperforms the classical NLP baseline by **4% across all metrics**.
+
+---
+
+## 🏗️ Architecture
+fake-news-classifier/
+├── notebooks/
+│   ├── EDA.ipynb
+│   ├── Tensors.ipynb
+│   └── Train Test Split.ipynb
+│   └── TF-IDF + LR baseline.ipynb
+│   └── Fake_News_Classifier.ipynb
+├── bert_final/          
+├── app.py               
+├── gradio_app.py        
+├── requirements.txt     
+├── model_comparison.csv 
+├── model_comparison.png 
+└── README.md           
+
+
 ---
 
 ## 📁 Dataset
